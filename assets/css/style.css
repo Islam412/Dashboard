@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #001;
+    display: flex;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.img-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #fff;
+    flex-shrink: 0;
+}
+
+.img-box img {
+    width: 100%;
+}
+
+.menu {
+    background-color: #002;
+    width: 60px;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.menu:hover {
+    width: 260px;
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    height: 95%;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    transition: 0.5s;
+}
+
+ul li a:hover, .active, .data-info .box:hover, td:hover {
+    background-color: #134;
+}
+
+.log-out {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.log-out a {
+    background-color: #a00;
+}
+
+ul li a i {
+    font-size: 30px;
+}
+
+/* content */
+
+.content {
+    width: 100%;
+    margin: 10px;
+}
+
+.title-info {
+    background-color: #236f8d;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+
+.title-info:hover {
+    background-color: #1a5e79;
+}
+
+.data-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.data-info .box {
+    height: 150px;
+    background-color: #123;
+    flex-basis: 150px;
+    flex-grow: 1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+
+.data-info .box i {
+    font-size: 40px;
+}
+
+.data-info .box .data {
+    text-align: center;
+}
+
+.data-info .box .data span {
+    font-size: 30px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-spacing: 3px;
+}
+
+td, th {
+    background-color: #123;
+    height: 40px;
+    border-radius: 8px;
+}
+
+th {
+    background-color: #236f8d;
+    transition: 0.5s;
+}
+
+th:hover {
+    background-color: #1a5e79;
+}
+
+.price, .count {
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.price {
+    background-color: #002;
+}
+
+.count {
+    background-color: #003;
+}
+
