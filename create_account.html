@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000; /* تحديث لون الخلفية */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    h2 {
+        margin-top: 0;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .profile-image img {
+        max-width: 185.9px;
+        max-height: 185.9px;
+    }
+    .hidden {
+        display: none;
+    }
+    a.button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Create Account</h2>
+    <form action="#" id="create-account-form">
+        <div class="profile-image">
+            <img id="preview-image" src="assets/images/img.png" alt="user">
+            <input type="file" id="avatar" name="avatar" class="hidden" accept="image/*">
+            <button type="button" onclick="document.getElementById('avatar').click()">Choose Profile Picture</button>
+        </div><br>
+        <input type="text" placeholder="First Name" required><br>
+        <input type="text" placeholder="Last Name" required><br>
+        <input type="text" placeholder="Username" required><br>
+        <input type="email" placeholder="Email Address" required><br>
+        <input type="password" placeholder="Password" required><br>
+        <input type="password" placeholder="Confirm Password" required><br>
+        <a href="https://www.google.com" class="button">Login to Google</a>
+    </form>
+    <p>Already have an account? <a href="login_register.html">Login</a></p>
+</div>
+
+<script>
+    document.getElementById('avatar').addEventListener('change', function() {
+        var file = this.files[0];
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                document.getElementById('preview-image').setAttribute('src', event.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+</body>
+</html>
